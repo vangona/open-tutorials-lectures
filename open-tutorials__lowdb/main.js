@@ -21,11 +21,13 @@ db.defaults({ topic: [], author: [] }).write();
 //   })
 //   .write();
 
-db.get("topic")
-  .push({
-    id: 2,
-    name: "mysql",
-    description: "mysql is ...",
-    author: 1,
-  })
-  .write();
+// db.get("topic")
+//   .push({
+//     id: 2,
+//     name: "mysql",
+//     description: "mysql is ...",
+//     author: 1,
+//   })
+//   .write();
+
+console.log(db.get("topic").find({ name: "lowdb", author: 1 }).value());
