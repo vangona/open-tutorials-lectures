@@ -2,7 +2,7 @@
   "topic": [
     {
       "id": 1,
-      "name": "lowdb",
+      "title": "lowdb",
       "description": "lowdb is ...",
       "author": 1
     },
@@ -10,13 +10,14 @@
       "id": 2,
       "name": "mysql",
       "description": "mysql is ...",
-      "author": 1
+      "author": 1,
+      "title": "MySQL & MariaDB"
     }
   ],
   "author": [
     {
       "id": 1,
-      "name": "egoing",
+      "title": "egoing",
       "profile": "developer"
     }
   ]
