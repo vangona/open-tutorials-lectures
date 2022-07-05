@@ -1,3 +1,4 @@
+const shortid = require("shortid");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db.json");
@@ -41,4 +42,23 @@ db.defaults({ topic: [], author: [] }).write();
 // db.get("topic").find({ id: 2 }).assign({ title: "MySQL & MariaDB" }).write();
 
 // 7강. 삭제
-db.get("topic").remove({ id: 2 }).write();
+// db.get("topic").remove({ id: 2 }).write();
+
+// 8강. id값
+const authorId = shortid.generate();
+db.get("author")
+  .push({
+    id: authorId,
+    name: "taeho",
+    profile: "data scientist",
+  })
+  .write();
+
+db.get("topic")
+  .push({
+    id: shortid.generate(),
+    title: "PostgreSQL",
+    description: "PostgreSQL is ...",
+    author: authorId,
+  })
+  .write();
