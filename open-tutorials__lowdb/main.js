@@ -38,4 +38,7 @@ db.defaults({ topic: [], author: [] }).write();
 // console.log(db.get("topic").find({ title: "lowdb", author: 1 }).value());
 
 // 6강. 수정
-db.get("topic").find({ id: 2 }).assign({ title: "MySQL & MariaDB" }).write();
+// db.get("topic").find({ id: 2 }).assign({ title: "MySQL & MariaDB" }).write();
+
+// 7강. 삭제
+db.get("topic").remove({ id: 2 }).write();
